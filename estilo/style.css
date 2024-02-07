@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Branco: hsl(0, 0%, 100%);
+    --Luz-rosa: hsl(275, 100%, 97%);
+    --Roxo-acinzentado: hsl(292, 16%, 49%);
+    --Roxo-escuro: hsl(292, 42%, 14%);
+}
+
+body{
+    font-family: 'Work Sans', 'sans-serif';
+    min-height: 100vh;
+    background-color: var(--Luz-rosa);
+    background-image: url(../imagens/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img, svg{
+    max-width: 100%;
+    display: block;
+}
+
+button{
+    cursor: pointer;
+    background-color: transparent;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 0;
+    padding: 1rem 0;
+    gap: 1rem;
+}
+
+button:hover{
+    color: purple;
+}
+
+.container{
+    background-color: var(--Branco);
+    max-width: 545px;
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    box-shadow: 10px 10px 10px hsla(276, 100%, 97%, 0.075);
+}
+
+.faq-titulo{
+    display: flex;
+    gap: 1.8rem;
+}
+
+.faq-titulo h1{
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.items-container .items:not(:last-child){
+    border-bottom: 2px solid var(--Luz-rosa);
+}
+
+.items .icons img{
+    min-width: 30px;
+}
+
+.items .icons .minus-icon{
+    display: none;
+}
+
+.descricao{
+    background-color: var(--Branco);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 200ms ease;
+}
+
+.descricao p{
+    color: var(--Roxo-acinzentado);
+    padding: 1.5rem 0;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem; 
+    text-align: center; 
+    font-size: .8rem;
+}
+
+@media (max-width: 375px){
+    body{
+        background-image: url(../imagens/background-pattern-mobile.svg);
+    }
+}
